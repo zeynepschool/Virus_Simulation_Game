@@ -19,3 +19,4 @@ print("The number of infected for the helped country decreases by 40%, whereas t
 ##print("Initial status of countries:")
 ##for entry in countries_infected:
 ##    print(f"Country: {entry['Country']}, Infected People: {entry['Infected People']}")
+
