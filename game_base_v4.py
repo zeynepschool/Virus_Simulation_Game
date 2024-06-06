@@ -29,7 +29,7 @@ for day in range(1, 6):
     print(f"\nDay {day}")
     print("Countries status:")
     for entry in countries_infected:
-        print(f"Country: {entry['Country']}, Infected People: {entry['Infected People']}")
+        print(f"Country: {entry['Country']}, Infected People: {entry['Infected People']} \n ")
 
 
     #Select Country
@@ -43,4 +43,3 @@ for day in range(1, 6):
             entry['Infected People'] *= 0.6  # Reduce by 40%
         else:
             entry['Infected People'] *= 1.2  # Increase by 20%
-
