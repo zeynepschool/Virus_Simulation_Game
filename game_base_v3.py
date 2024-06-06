@@ -31,3 +31,4 @@ for day in range(1, 6):
     for entry in countries_infected:
         print(f"Country: {entry['Country']}, Infected People: {entry['Infected People']}")
 
+
