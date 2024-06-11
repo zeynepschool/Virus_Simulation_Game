@@ -44,7 +44,7 @@ for day in range(1, 6):
 print("\nFinal status of countries after 5 days:")
 lockdown_occurred = False
 for entry in countries_infected:
-    lockdown_status = "Yes" if entry['Infected People'] > 350000 else "No"
+    lockdown_status = "Yes" if entry['Infected People'] > 375000 else "No"
     print(f"Country: {entry['Country']}, Infected People: {entry['Infected People']:.0f}, On Lockdown: {lockdown_status}")
     if lockdown_status == "Yes":
         lockdown_occurred = True
