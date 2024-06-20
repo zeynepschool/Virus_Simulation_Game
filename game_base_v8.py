@@ -25,7 +25,6 @@ for entry in countries_infected:
 # Loop for 5 days
 for day in range(1, 6):
     print(f"\nDay {day}")
-    
 
     # Check for valid country
     valid_country = False
