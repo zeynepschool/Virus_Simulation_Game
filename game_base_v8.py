@@ -38,7 +38,7 @@ for day in range(1, 6):
         if not valid_country:
             print("Invalid country name. Please enter a valid country name from the list.")
 
-    # Apply the changes and Display the final status of each country and determine lockdown status
+    # Apply the changes and Display the final status of each country
     for entry in countries_infected:
         if entry['Country'].lower() == help_country.lower():
             entry['Infected People'] *= 0.6  # Reduce by 40%
