@@ -13,8 +13,14 @@ countries_infected = [
 ]
 
 # Define the game  
-print("Welcome to Virus Simulation Game\nEach day user can choose to help only one country between 6 countries, within 5 days.")
-print("The number of infected for the helped country decreases by 40%, whereas the other countries increase by 20%.")
+# Main game logic
+print("Welcome to Virus Simulation Game")
+print("Each day you can choose to help only one country. Helping a country decreases its infected count by 40%, while the other countries' infected counts increase by 20%.")
+
+#Initial Statues of Countries
+print("Initial status of countries:")
+for entry in countries_infected:
+    print(f"Country: {entry['Country']}, Infected People: {entry['Infected People']} \n ")
 
 # Loop for 5 days
 for day in range(1, 6):
@@ -22,6 +28,7 @@ for day in range(1, 6):
     print("Countries status:")
     for entry in countries_infected:
         print(f"Country: {entry['Country']}, Infected People: {entry['Infected People']} \n ")
+    
 
     # Check for valid country
     valid_country = False
@@ -34,12 +41,14 @@ for day in range(1, 6):
         if not valid_country:
             print("Invalid country name. Please enter a valid country name from the list.")
 
-    # Apply the changes and Display the final status of each country
+    # Apply the changes and Display the final status of each country and determine lockdown status
     for entry in countries_infected:
         if entry['Country'].lower() == help_country.lower():
             entry['Infected People'] *= 0.6  # Reduce by 40%
         else:
             entry['Infected People'] *= 1.2  # Increase by 20%
+
+
 
 # Display the final status of each country and determine lockdown status
 print("\nFinal status of countries after 5 days:")
@@ -51,7 +60,13 @@ for entry in countries_infected:
         lockdown_occurred = True
 
 # Determine if the player wins or loses
-if lockdown_occurred:
-    print("\nYou lose! One or more countries went into lockdown.")
-else:
-    print("\nYou win! No countries went into lockdown.")
+def game_result():
+    if lockdown_occurred:
+        print("\nYou lose! One or more countries went into lockdown.")
+    else:
+        print("\nYou win! No countries went into lockdown.")
+        
+game_result()
+
+
+
