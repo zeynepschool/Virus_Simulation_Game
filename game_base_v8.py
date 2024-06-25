@@ -38,10 +38,8 @@ for day in range(1, 6):
     for entry in countries_infected:
         if entry['Country'].lower() == help_country.lower():
             entry['Infected People'] *= 0.6  # Reduce by 40%
-            print(f"\nHelped {entry['Country']}: Infected reduced to {entry['Infected People']:.0f}")
         else:
             entry['Infected People'] *= 1.2  # Increase by 20%
-            print(f"\n{entry['Country']}: Infected increased to {entry['Infected People']:.0f}")
 
 # Display the final status of each country and determine lockdown status
 print("\nFinal status of countries after 5 days:")
