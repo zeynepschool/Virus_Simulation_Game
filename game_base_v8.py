@@ -13,18 +13,15 @@ countries_infected = [
 ]
 
 # Define the game  
-# Main game logic
-print("Welcome to Virus Simulation Game")
-print("Each day you can choose to help only one country. Helping a country decreases its infected count by 40%, while the other countries' infected counts increase by 20%.")
-
-#Initial Statues of Countries
-print("Initial status of countries:")
-for entry in countries_infected:
-    print(f"Country: {entry['Country']}, Infected People: {entry['Infected People']} \n ")
+print("Welcome to Virus Simulation Game\nEach day user can choose to help only one country between 6 countries, within 5 days.")
+print("The number of infected for the helped country decreases by 40%, whereas the other countries increase by 20%.")
 
 # Loop for 5 days
 for day in range(1, 6):
     print(f"\nDay {day}")
+    print("Countries status:")
+    for entry in countries_infected:
+        print(f"Country: {entry['Country']}, Infected People: {entry['Infected People']} \n ")
 
     # Check for valid country
     valid_country = False
@@ -60,4 +57,3 @@ if lockdown_occurred:
     print("\nYou lose! One or more countries went into lockdown.")
 else:
     print("\nYou win! No countries went into lockdown.")
-
