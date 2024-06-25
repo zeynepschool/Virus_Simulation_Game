@@ -17,11 +17,6 @@ countries_infected = [
 print("Welcome to Virus Simulation Game")
 print("Each day you can choose to help only one country. Helping a country decreases its infected count by 40%, while the other countries' infected counts increase by 20%.")
 
-#Initial Statues of Countries
-print("Initial status of countries:")
-for entry in countries_infected:
-    print(f"Country: {entry['Country']}, Infected People: {entry['Infected People']} \n ")
-
 # Loop for 5 days
 for day in range(1, 6):
     print(f"\nDay {day}")
