@@ -49,7 +49,6 @@ for day in range(1, 6):
             entry['Infected People'] *= 1.2  # Increase by 20%
 
 
-
 # Display the final status of each country and determine lockdown status
 print("\nFinal status of countries after 5 days:")
 lockdown_occurred = False
