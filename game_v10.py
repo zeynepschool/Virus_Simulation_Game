@@ -47,6 +47,7 @@ def game_result(lockdown_occurred):
 # Main game logic
 print("Welcome to Virus Simulation Game")
 print("Each day you can choose to help only one country. Helping a country decreases its infected count by 40%, while the other countries' infected counts increase by 20%.")
+print("The country goes into lockdown after 375,000 infected people. Therefore, to win the game, you must make sure that the countries are under 375,000 infected people.")
 
 # Loop for 5 days
 for day in range(1, 6):
