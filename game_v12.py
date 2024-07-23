@@ -1,6 +1,5 @@
 # Virus Simulation Game
 
-# List of countries with initial infected people
 countries = [
     {"Country": "New Zealand", "Infected People": 150000},
     {"Country": "Australia", "Infected People": 150000},
@@ -12,7 +11,7 @@ countries = [
 ]
 
 def display_status(day, countries):
-    # Function to display the status of each country at the end of each day
+    # Function to display the status of each country at the end of each 
     print(f"\nDay {day}")
     print("Countries status:")
     for entry in countries:
